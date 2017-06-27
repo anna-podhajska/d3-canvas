@@ -1,0 +1,63 @@
+
+p {
+  margin-bottom: 5%;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #2F2F31;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#paintGreen, #paintRed {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  margin-top: 2px;
+  border-radius: 50%;
+}
+#paintGreen:hover, #paintRed:hover {
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#paintGreen {
+  background-color: #b8d3d3;
+}
+#paintRed {
+  background-color: #d36461;
+}
+#instruction1 {
+  margin-bottom: 1rem;;
+}
+#instruction2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+/* footer
+––––––––––––––––––––––––––––––––––––––– */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.FooterBox {
+  border: 5px solid #2F2F31;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #2F2F31;
+  min-height: 10%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.FooterBox a {
+  text-decoration: none;
+  color: #ce5a57;
+  line-height: 3.6;
+}
