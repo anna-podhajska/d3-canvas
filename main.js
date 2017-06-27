@@ -40,6 +40,9 @@ var column = row.selectAll(".square")
 		$("#paintGreen").click(function(){
 			currenColorScheme = colorSchemeGreen;
 		});
+		$("#paintYellow").click(function(){
+			currenColorScheme = colorSchemeYellow;
+		})
 	};
 
 	function colorSchemeGreen(domElement, dataCell) {
@@ -70,6 +73,24 @@ var column = row.selectAll(".square")
 		if ((dataCell.click)%12 == 6 ) { d3.select(domElement).style("fill","5e3b3a"); }
 		if ((dataCell.click)%12 == 7 ) { d3.select(domElement).style("fill","#3f2121"); }
 		if ((dataCell.click)%12 == 8 ) { d3.select(domElement).style("fill","#231212"); }
+		if ((dataCell.click)%12 == 9 ) { d3.select(domElement).style("fill","black"); }
+		if ((dataCell.click)%12 == 10 ) { d3.select(domElement).style("fill","black"); }
+		if ((dataCell.click)%12 == 11 ) { d3.select(domElement).style("fill","black"); }
+
+		if ((dataCell.click) < 11) {
+		dataCell.click ++;   };
+	}
+
+	function colorSchemeYellow(domElement, dataCell) {
+		if ((dataCell.click)%12 == 0 ) { d3.select(domElement).style("fill","#ffdc93"); }
+		if ((dataCell.click)%12 == 1 ) { d3.select(domElement).style("fill","#f4d084"); }
+		if ((dataCell.click)%12 == 2 ) { d3.select(domElement).style("fill","#d8b66e"); }
+		if ((dataCell.click)%12 == 3 ) { d3.select(domElement).style("fill","#bf9f5b"); }
+		if ((dataCell.click)%12 == 4 ) { d3.select(domElement).style("fill","#a88a4a"); }
+		if ((dataCell.click)%12 == 5 ) { d3.select(domElement).style("fill","#91753b"); }
+		if ((dataCell.click)%12 == 6 ) { d3.select(domElement).style("fill","7a612d"); }
+		if ((dataCell.click)%12 == 7 ) { d3.select(domElement).style("fill","#664f21"); }
+		if ((dataCell.click)%12 == 8 ) { d3.select(domElement).style("fill","#473613"); }
 		if ((dataCell.click)%12 == 9 ) { d3.select(domElement).style("fill","black"); }
 		if ((dataCell.click)%12 == 10 ) { d3.select(domElement).style("fill","black"); }
 		if ((dataCell.click)%12 == 11 ) { d3.select(domElement).style("fill","black"); }
