@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <title> ania's corner </title>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 <body>
 
+<!-- ALL THE BOARD MAGIC GOES HERE -->
   <div id="grid"> </div>
 
-  <p id="instruction1">
-    hover and click on the board
-  </p>
+<!-- INSTRUCTIONS AND COLOUR CHANGE BUTTONS: -->
+
+  <p id="instruction1">hover and click on the board</p>
 
   <p id="instruction2"> color change </p>
   <div class="container">
@@ -27,8 +23,9 @@
     <div id="paintRed"> </div>
     <div id="paintYellow"> </div>
   </div>
-
   <hr>
+
+  <!-- RESOURCES I USED -->
   <p>
     D3.js is a JavaScript library for manipulating documents based on data. D3 applied above has been used to create an interactive svg image to play with.
   </p>
@@ -37,8 +34,7 @@
     <a href="http://www.cagrimmett.com/til/2016/08/17/d3-lets-make-a-grid.html">turtorial about grids by Chuck Grimmett</a>
   </p>
 
-
-
+  <!-- FOOTER -->
   <footer class="FooterBox">
         <a href="../../index.html" class="row">home</a>
         <a href="../../blog/a-work.html" class="row">work</a>
@@ -47,5 +43,6 @@
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="main.js"></script>
+
 </body>
 </html>
