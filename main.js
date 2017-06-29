@@ -1,4 +1,4 @@
-//PLAYING WITH D3:
+//D3:
 
 $(document).ready(color);
 var currenColorScheme = colorSchemeGreen;
@@ -26,6 +26,8 @@ var column = row.selectAll(".square")
 	.style("fill", "#fff")
 	.style("stroke", "lightgray")
   .style("stroke", "50%")
+
+
   .on('mouseover', function(d) {
 		currenColorScheme(this, d);
   })
@@ -33,6 +35,7 @@ var column = row.selectAll(".square")
 		d3.select(this).style('fill', '#ce5a57');
 	});
 
+// function that reacts to the color change button click on html:
 	function color() {
 		$("#paintRed").click(function(){
 			currenColorScheme = colorSchemeRed;
@@ -45,6 +48,7 @@ var column = row.selectAll(".square")
 		})
 	};
 
+// color schemes for painting each color, the colors darken if you hover more than one time:
 	function colorSchemeGreen(domElement, dataCell) {
 		if ((dataCell.click)%12 == 0 ) { d3.select(domElement).style("fill","#caf7f7"); }
 		if ((dataCell.click)%12 == 1 ) { d3.select(domElement).style("fill","#b8d3d3"); }
@@ -99,9 +103,7 @@ var column = row.selectAll(".square")
 		dataCell.click ++;   };
 	}
 
-
-
-//INITIALIZING THE BOARD:
+//INITIALIZING THE BOARD according to the turtorial by Chuck Grimmett:
 
   function gridData() {
   	var data = new Array();
@@ -135,3 +137,7 @@ var column = row.selectAll(".square")
   	return data;
 
   }
+
+//RESOURCES:
+	// https://d3js.org
+	// http://www.cagrimmett.com/til/2016/08/17/d3-lets-make-a-grid.html
