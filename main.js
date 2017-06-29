@@ -3,7 +3,6 @@
 $(document).ready(color);
 var currenColorScheme = colorSchemeGreen;
 
-
 var grid = d3.select("#grid")
 	.append("svg")
 	.attr("width","1410px")
@@ -27,13 +26,13 @@ var column = row.selectAll(".square")
 	.style("stroke", "lightgray")
   .style("stroke", "50%")
 
-
   .on('mouseover', function(d) {
 		currenColorScheme(this, d);
   })
 	.on('click', function(d) {
 		d3.select(this).style('fill', '#ce5a57');
 	});
+
 
 // function that reacts to the color change button click on html:
 	function color() {
@@ -45,8 +44,13 @@ var column = row.selectAll(".square")
 		});
 		$("#paintYellow").click(function(){
 			currenColorScheme = colorSchemeYellow;
-		})
+		});
 	};
+
+//turning off right-mouse click:
+	$('#grid').on('contextmenu', function(d) {
+		return false;
+	});
 
 // color schemes for painting each color, the colors darken if you hover more than one time:
 	function colorSchemeGreen(domElement, dataCell) {
@@ -100,6 +104,15 @@ var column = row.selectAll(".square")
 		if ((dataCell.click)%12 == 11 ) { d3.select(domElement).style("fill","black"); }
 
 		if ((dataCell.click) < 11) {
+		dataCell.click ++;   };
+	}
+
+	function colorSchemeClear(domElement, dataCell) {
+		if ((dataCell.click)%12 == 0 ) { d3.select(domElement).style("fill","white"); }
+		if ((dataCell.click)%12 == 1 ) { d3.select(domElement).style("fill","white"); }
+		if ((dataCell.click)%12 == 2 ) { d3.select(domElement).style("fill","white"); }
+
+		if ((dataCell.click) < 3) {
 		dataCell.click ++;   };
 	}
 
