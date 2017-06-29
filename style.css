@@ -41,7 +41,10 @@ p {
   padding-bottom: 0;
   padding-top: 0;
 }
-
+#noMobile {
+  color:#d36461;
+  text-align: center;
+}
 .resLinks {
   font-size: 90%;
 }
@@ -77,4 +80,24 @@ footer {
   text-decoration: none;
   color: #ce5a57;
   line-height: 3.6;
+}
+
+
+
+@media only screen and (min-device-width: 768px){
+  #noMobile {
+    display: none
+  }
+}
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    #noMobile {
+      display: block;
+    }
+
 }
