@@ -3,10 +3,7 @@ p {
   margin-bottom: 5%;
   text-align: center;
 }
-a {
-  text-decoration: none;
-  color: #2F2F31;
-}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -45,8 +42,19 @@ a {
   padding-top: 0;
 }
 
-.smaller {
-  font-size: 80%;
+.resLinks {
+  font-size: 90%;
+}
+
+.resLinks a {
+  line-height: 1.3rem;
+  text-decoration: none;
+  color: #2F2F31;
+}
+.resLinks a:hover {
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #d36461;
 }
 /* footer
 ––––––––––––––––––––––––––––––––––––––– */
