@@ -3,6 +3,8 @@
 $(document).ready(color);
 var currenColorScheme = colorSchemeGreen;
 
+var mouseDown = false;
+
 var grid = d3.select("#grid")
 	.append("svg")
 	.attr("width","1410px")
@@ -27,8 +29,11 @@ var column = row.selectAll(".square")
   .style("stroke", "50%")
 
   .on('mouseover', function(d) {
-		currenColorScheme(this, d);
+		if (mouseDown === true) {
+			currenColorScheme(this, d);
+		}
   })
+
 	.on('click', function(d) {
 		d3.select(this).style('fill', '#ce5a57');
 	});
@@ -44,6 +49,12 @@ var column = row.selectAll(".square")
 		});
 		$("#paintYellow").click(function(){
 			currenColorScheme = colorSchemeYellow;
+		});
+		$("#grid").mousedown(function(){
+			mouseDown = true;
+		});
+		$("#grid").mouseup(function(){
+			mouseDown = false;
 		});
 	};
 
