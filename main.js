@@ -1,4 +1,4 @@
-//D3:
+//hello!
 
 $(document).ready(color);
 var currenColorScheme = colorSchemeGreen;
@@ -50,6 +50,7 @@ var column = row.selectAll(".square")
 		$("#paintYellow").click(function(){
 			currenColorScheme = colorSchemeYellow;
 		});
+		//this part makes sure that we paint when the mouse is down
 		$("#grid").mousedown(function(){
 			mouseDown = true;
 		});
@@ -118,14 +119,9 @@ var column = row.selectAll(".square")
 		dataCell.click ++;   };
 	}
 
-	function colorSchemeClear(domElement, dataCell) {
-		if ((dataCell.click)%12 == 0 ) { d3.select(domElement).style("fill","white"); }
-		if ((dataCell.click)%12 == 1 ) { d3.select(domElement).style("fill","white"); }
-		if ((dataCell.click)%12 == 2 ) { d3.select(domElement).style("fill","white"); }
-
-		if ((dataCell.click) < 3) {
-		dataCell.click ++;   };
-	}
+	// function colorSchemeClear(domElement, dataCell) {
+	// 	if ((dataCell.click)%12 == 0 ) { d3.select(domElement).style("fill","white"); }
+	// }
 
 //INITIALIZING THE BOARD according to the turtorial by Chuck Grimmett:
 
